@@ -9,23 +9,52 @@ func movimento(delta):
 	if Input.is_action_pressed("ui_right"):
 		DirecaoAtual = "direita"
 		animacao(1)
-		velocity.x = velocidade
-		velocity.y = 0
+		if Input.is_action_pressed("ui_up"):
+			velocity.x = velocidade
+			velocity.y = -velocidade
+		elif Input.is_action_pressed("ui_down"):
+			velocity.x = velocidade
+			velocity.y = velocidade
+		else:
+			velocity.x = velocidade
+			velocity.y = 0
+				
 	elif Input.is_action_pressed("ui_left"):
 		DirecaoAtual = "esquerda"
 		animacao(1)
-		velocity.x = -velocidade
-		velocity.y = 0
+		if Input.is_action_pressed("ui_up"):
+			velocity.x = -velocidade
+			velocity.y = -velocidade
+		elif Input.is_action_pressed("ui_down"):
+			velocity.x = -velocidade
+			velocity.y = velocidade
+		else:
+			velocity.x = -velocidade
+			velocity.y = 0
 	elif Input.is_action_pressed("ui_up"):
 		DirecaoAtual = "cima"
 		animacao(1)
-		velocity.x = 0
-		velocity.y = -velocidade
+		if Input.is_action_pressed("ui_right"):
+			velocity.x = velocidade
+			velocity.y = -velocidade
+		elif Input.is_action_pressed("ui_left"):
+			velocity.x = -velocidade
+			velocity.y = -velocidade
+		else:
+			velocity.x = 0
+			velocity.y = -velocidade
 	elif Input.is_action_pressed("ui_down"):
 		DirecaoAtual = "baixo"
 		animacao(1)
-		velocity.x = 0
-		velocity.y = velocidade
+		if Input.is_action_pressed("ui_right"):
+			velocity.x = velocidade
+			velocity.y = velocidade
+		elif Input.is_action_pressed("ui_left"):
+			velocity.x = -velocidade
+			velocity.y = velocidade
+		else:
+			velocity.x = 0
+			velocity.y = velocidade
 	else:
 		animacao(0)
 		velocity.x = 0
