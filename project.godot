@@ -15,10 +15,6 @@ run/main_scene="uid://dn2iwvys74cms"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[display]
-
-window/stretch/scale=4.0
-
 [input]
 
 ui_left={

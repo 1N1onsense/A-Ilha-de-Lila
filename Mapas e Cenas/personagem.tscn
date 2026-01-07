@@ -195,4 +195,4 @@ script = ExtResource("1_ytnib")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8tupx")
 animation = &"andar-direita"
-frame_progress = 0.1448716
+frame_progress = 0.54550254
