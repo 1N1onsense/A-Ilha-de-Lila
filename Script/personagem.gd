@@ -1,64 +1,78 @@
 extends CharacterBody2D
-
 const velocidade = 120
 var DirecaoAtual = "none"
+
 func _physics_process(delta: float) -> void:
 	movimento(delta)
 	move_and_slide()
+	
 func movimento(delta):
+	# Variável para poder trocar de andar -> correr
+	var VelocidadeAtual = velocidade
+	
+	# Se apertar shift aumenta velocidade
+	if Input.is_action_pressed("ui_shift"):
+		VelocidadeAtual = velocidade * 1.5
+		
+	var esta_movendo = false # Flag pra saber se tá se movendo
+		
 	if Input.is_action_pressed("ui_right"):
 		DirecaoAtual = "direita"
-		animacao(1)
+		esta_movendo = true
 		if Input.is_action_pressed("ui_up"):
-			velocity.x = velocidade
-			velocity.y = -velocidade
+			velocity.x = VelocidadeAtual
+			velocity.y = -VelocidadeAtual
 		elif Input.is_action_pressed("ui_down"):
-			velocity.x = velocidade
-			velocity.y = velocidade
+			velocity.x = VelocidadeAtual
+			velocity.y = VelocidadeAtual
 		else:
-			velocity.x = velocidade
+			velocity.x = VelocidadeAtual
 			velocity.y = 0
 				
 	elif Input.is_action_pressed("ui_left"):
 		DirecaoAtual = "esquerda"
-		animacao(1)
+		esta_movendo = true
 		if Input.is_action_pressed("ui_up"):
-			velocity.x = -velocidade
-			velocity.y = -velocidade
+			velocity.x = -VelocidadeAtual
+			velocity.y = -VelocidadeAtual
 		elif Input.is_action_pressed("ui_down"):
-			velocity.x = -velocidade
-			velocity.y = velocidade
+			velocity.x = -VelocidadeAtual
+			velocity.y = VelocidadeAtual
 		else:
-			velocity.x = -velocidade
+			velocity.x = -VelocidadeAtual
 			velocity.y = 0
 	elif Input.is_action_pressed("ui_up"):
 		DirecaoAtual = "cima"
-		animacao(1)
+		esta_movendo = true
 		if Input.is_action_pressed("ui_right"):
-			velocity.x = velocidade
-			velocity.y = -velocidade
+			velocity.x = VelocidadeAtual
+			velocity.y = -VelocidadeAtual
 		elif Input.is_action_pressed("ui_left"):
-			velocity.x = -velocidade
-			velocity.y = -velocidade
+			velocity.x = -VelocidadeAtual
+			velocity.y = -VelocidadeAtual
 		else:
 			velocity.x = 0
-			velocity.y = -velocidade
+			velocity.y = -VelocidadeAtual
 	elif Input.is_action_pressed("ui_down"):
 		DirecaoAtual = "baixo"
-		animacao(1)
+		esta_movendo = true
 		if Input.is_action_pressed("ui_right"):
-			velocity.x = velocidade
-			velocity.y = velocidade
+			velocity.x = VelocidadeAtual
+			velocity.y = VelocidadeAtual
 		elif Input.is_action_pressed("ui_left"):
-			velocity.x = -velocidade
-			velocity.y = velocidade
+			velocity.x = -VelocidadeAtual
+			velocity.y = VelocidadeAtual
 		else:
 			velocity.x = 0
-			velocity.y = velocidade
+			velocity.y = VelocidadeAtual
+	if esta_movendo and velocity.length() > 0:
+		velocity = velocity.normalized() * VelocidadeAtual
+		animacao(1)
 	else:
 		animacao(0)
 		velocity.x = 0
 		velocity.y = 0
+		
 func animacao(mov):
 	var direcao = DirecaoAtual
 	var anim = $AnimatedSprite2D

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxy32pi0vlt62" path="res://sprites/Tilesets/Beach-and-caves-tileset_ALL_by_AxulArt.png" id="1_y5ddf"]
 [ext_resource type="Texture2D" uid="uid://vfolsla7aesm" path="res://sprites/Tilesets/Beach-and-caves-tileset_by_AxulArt.png" id="2_6h0i3"]
-[ext_resource type="PackedScene" uid="uid://rkmrhh0mpmao" path="res://Mapas e Cenas/personagem2.tscn" id="3_6h0i3"]
+[ext_resource type="PackedScene" path="res://Mapas e Cenas/personagem2.tscn" id="3_6h0i3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgxmx"]
 texture = ExtResource("1_y5ddf")
