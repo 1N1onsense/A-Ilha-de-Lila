@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Nosso Jogo"
-run/main_scene="uid://dn2iwvys74cms"
+run/main_scene="uid://s6jquu3hwgqx"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
