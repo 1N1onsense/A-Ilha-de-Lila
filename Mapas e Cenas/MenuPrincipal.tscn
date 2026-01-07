@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://s6jquu3hwgqx"]
+
+[ext_resource type="Script" uid="uid://bpxp5107tsn5k" path="res://Script/MenuPrincipal.gd" id="1_ltsme"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kblji"]
+line_spacing = 0.0
+font_size = 64
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ltsme")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+offset_left = 307.0
+offset_top = 145.0
+offset_right = 866.0
+offset_bottom = 233.0
+text = "Novo Jogo"
+label_settings = SubResource("LabelSettings_kblji")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Iniciar" type="Button" parent="CanvasLayer"]
+offset_left = 524.0
+offset_top = 395.0
+offset_right = 635.0
+offset_bottom = 431.0
+theme_override_font_sizes/font_size = 20
+text = "Iniciar"
+
+[node name="Sair" type="Button" parent="CanvasLayer"]
+offset_left = 524.0
+offset_top = 443.0
+offset_right = 635.0
+offset_bottom = 479.0
+theme_override_font_sizes/font_size = 20
+text = "Sair"
+
+[connection signal="pressed" from="CanvasLayer/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Sair" to="." method="_on_sair_pressed"]
