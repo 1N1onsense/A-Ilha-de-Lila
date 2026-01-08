@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=3 uid="uid://btrackenppdkg"]
+
+[ext_resource type="Texture2D" uid="uid://dkfbfn6du1ldd" path="res://sprites/placeholder/Items/Book.png" id="1_87idb"]
+[ext_resource type="Texture2D" uid="uid://yfbckeeckw4w" path="res://sprites/placeholder/Items/Bag.png" id="1_l28mc"]
+[ext_resource type="Script" path="res://Script/UI.gd" id="1_odhl8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87idb"]
+bg_color = Color(0, 0, 0, 0.47058824)
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+
+[node name="Ui" type="Control"]
+z_index = 5
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_odhl8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.6
+offset_bottom = 158.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="Bag" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("1_l28mc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Background Margin" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = -20
+
+[node name="Background" type="PanelContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_87idb")
+
+[node name="Items Margin" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 5
+
+[node name="Items" type="GridContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background/Items Margin"]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+columns = 5
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background/Items Margin/Items"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("1_87idb")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background/Items Margin/Items"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("1_87idb")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background/Items Margin/Items"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("1_87idb")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background/Items Margin/Items"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("1_87idb")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background/Items Margin/Items"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("1_87idb")
+expand_mode = 3
+stretch_mode = 5

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://7a4lbou2oclv"]
+[gd_scene load_steps=5 format=3 uid="uid://7a4lbou2oclv"]
 
-[ext_resource type="PackedScene" uid="uid://dn2iwvys74cms" path="res://Mapas e Cenas/personagem.tscn" id="1_ulx7y"]
+[ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="1_1f1ij"]
+[ext_resource type="PackedScene" uid="uid://rkmrhh0mpmao" path="res://Mapas e Cenas/personagem2.tscn" id="2_1f1ij"]
 [ext_resource type="Texture2D" uid="uid://dlnuvlp3t4fmm" path="res://icon.svg" id="2_7tt4r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f1ij"]
@@ -8,11 +9,12 @@ size = Vector2(34, 30)
 
 [node name="Teste" type="Node2D"]
 
-[node name="personagem" parent="." instance=ExtResource("1_ulx7y")]
-position = Vector2(14, -2)
+[node name="Ui" parent="." instance=ExtResource("1_1f1ij")]
+
+[node name="personagem" parent="." instance=ExtResource("2_1f1ij")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(128, 0)
+position = Vector2(128, -8)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(0, -1.9073486e-06)
