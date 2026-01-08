@@ -8,17 +8,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f1ij"]
 size = Vector2(34, 30)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6twr5"]
-radius = 43.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fntb4"]
 size = Vector2(128, 127.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6twr5"]
+radius = 43.0
 
 [node name="Teste" type="Node2D"]
 
 [node name="personagem" parent="." instance=ExtResource("1_vqyv3")]
 position = Vector2(651, 87)
-collision_layer = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(128, 0)
@@ -47,13 +46,13 @@ position = Vector2(81, 126)
 texture = ExtResource("2_5ye5j")
 script = ExtResource("4_fntb4")
 
-[node name="AreaInteracao" parent="Sprite2D" instance=ExtResource("4_85enp")]
-position = Vector2(-108, -194)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(81, 126.25)
+shape = SubResource("RectangleShape2D_fntb4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AreaInteracao"]
+[node name="AreaInteracao" parent="." instance=ExtResource("4_85enp")]
+position = Vector2(-27, -68)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteracao"]
 position = Vector2(-3, 2)
 shape = SubResource("CircleShape2D_6twr5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
-position = Vector2(0, 0.25)
-shape = SubResource("RectangleShape2D_fntb4")

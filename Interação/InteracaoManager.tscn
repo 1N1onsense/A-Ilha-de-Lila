@@ -2,5 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bbo04tvtx7cl2" path="res://Interação/interacao_manager.gd" id="1_3iumk"]
 
-[node name="InteracaoManager" type="Node2D"]
+[node name="InteracaoManager" type="Node2D" groups=["player"]]
 script = ExtResource("1_3iumk")
+
+[node name="Label" type="Label" parent="."]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_right = 65.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "[E] para interagir"
+horizontal_alignment = 1
+vertical_alignment = 1

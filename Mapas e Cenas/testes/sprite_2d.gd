@@ -1,7 +1,7 @@
 extends Sprite2D
 
 
-@onready var interaction_area: AreaInteracao = $AreaInteracao
+@onready var interaction_area = $AreaInteracao
 @onready var sprite = $Sprite2D
 #@onready var speech_sound = 
 
