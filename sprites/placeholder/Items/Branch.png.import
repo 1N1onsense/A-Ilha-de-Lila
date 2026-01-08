@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfeflfb1osgr"
-path="res://.godot/imported/Gourd.png-dbbb12dd8b99d1394cf7f957449e58f3.ctex"
+uid="uid://dkrulydeehr5p"
+path="res://.godot/imported/Branch.png-1ab64ee7271c28515aa8e070e8854904.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholder/Items/Gourd.png"
-dest_files=["res://.godot/imported/Gourd.png-dbbb12dd8b99d1394cf7f957449e58f3.ctex"]
+source_file="res://sprites/placeholder/Items/Branch.png"
+dest_files=["res://.godot/imported/Branch.png-1ab64ee7271c28515aa8e070e8854904.ctex"]
 
 [params]
 

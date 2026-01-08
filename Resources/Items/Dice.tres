@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dux0nw4sptl67"]
+
+[ext_resource type="Texture2D" uid="uid://d16hyfbtkxw6f" path="res://sprites/placeholder/Items/Dice 6.png" id="1_4vnpv"]
+[ext_resource type="Script" uid="uid://dcvwrx6vxt2xd" path="res://Script/ItemData.gd" id="1_t7btj"]
+
+[resource]
+script = ExtResource("1_t7btj")
+nome = "Dado"
+id = "dice"
+img = ExtResource("1_4vnpv")
+metadata/_custom_type_script = "uid://dcvwrx6vxt2xd"

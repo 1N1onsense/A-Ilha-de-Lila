@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dhcoxlkaj4wxn"]
+
+[ext_resource type="Texture2D" uid="uid://dkfbfn6du1ldd" path="res://sprites/placeholder/Items/Book.png" id="1_yclcl"]
+[ext_resource type="Script" uid="uid://dcvwrx6vxt2xd" path="res://Script/ItemData.gd" id="2_75no7"]
+
+[resource]
+script = ExtResource("2_75no7")
+nome = "Livro"
+id = "book"
+img = ExtResource("1_yclcl")
+metadata/_custom_type_script = "uid://dcvwrx6vxt2xd"

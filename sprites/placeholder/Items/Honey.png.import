@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jbfuvawvcr37"
-path="res://.godot/imported/Dice 4.png-4c2a4f4f40b8da8256c6bffc1096bd37.ctex"
+uid="uid://c3osp8w7g8l55"
+path="res://.godot/imported/Honey.png-503340a28d167285083adf31eb8e4936.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholder/Items/Dice 4.png"
-dest_files=["res://.godot/imported/Dice 4.png-4c2a4f4f40b8da8256c6bffc1096bd37.ctex"]
+source_file="res://sprites/placeholder/Items/Honey.png"
+dest_files=["res://.godot/imported/Honey.png-503340a28d167285083adf31eb8e4936.ctex"]
 
 [params]
 

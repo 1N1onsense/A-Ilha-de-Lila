@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo7bjgujyp0s1"
-path="res://.godot/imported/CrateEmpty.png-9ac1a9a94aaab6c487c1c56b5f025652.ctex"
+uid="uid://dqo06faxls8ey"
+path="res://.godot/imported/feather.png-1bbe39fa8d0523c3ec25a39d30af8447.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholder/Items/CrateEmpty.png"
-dest_files=["res://.godot/imported/CrateEmpty.png-9ac1a9a94aaab6c487c1c56b5f025652.ctex"]
+source_file="res://sprites/placeholder/Items/feather.png"
+dest_files=["res://.godot/imported/feather.png-1bbe39fa8d0523c3ec25a39d30af8447.ctex"]
 
 [params]
 

@@ -19,9 +19,9 @@ script = ExtResource("1_ltsme")
 process_mode = 3
 
 [node name="Title" type="Label" parent="CanvasLayer"]
-offset_left = 307.0
+offset_left = 346.0
 offset_top = 145.0
-offset_right = 866.0
+offset_right = 905.0
 offset_bottom = 233.0
 text = "Novo Jogo"
 label_settings = SubResource("LabelSettings_kblji")
@@ -29,17 +29,17 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Iniciar" type="Button" parent="CanvasLayer"]
-offset_left = 524.0
-offset_top = 395.0
-offset_right = 635.0
-offset_bottom = 431.0
+offset_left = 559.0
+offset_top = 393.0
+offset_right = 670.0
+offset_bottom = 429.0
 theme_override_font_sizes/font_size = 20
 text = "Iniciar"
 
 [node name="Sair" type="Button" parent="CanvasLayer"]
-offset_left = 524.0
+offset_left = 559.0
 offset_top = 443.0
-offset_right = 635.0
+offset_right = 670.0
 offset_bottom = 479.0
 theme_override_font_sizes/font_size = 20
 text = "Sair"

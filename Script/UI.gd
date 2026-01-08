@@ -2,18 +2,31 @@ extends Control
 
 @onready var panel = $"CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background"
 @onready var bag = $"CanvasLayer/MarginContainer/HBoxContainer/Bag"
-
+@onready var items_ui =$"CanvasLayer/MarginContainer/HBoxContainer/Background Margin/Background/Items Margin/Items"
+const ITEM_FRAME = preload("res://Mapas e Cenas/ItemFrame.tscn")
 var inventory_is_open: bool = false
-
-func _process(delta: float) -> void:
-	GameManager.toggle_bag_requested.connect(toggle_inventory)
 
 func _ready():
 	panel.modulate.a = 0
-	#await get_tree().create_timer(2.0).timeout
-	#toggle_inventory ()
-	#await get_tree().create_timer(2.0).timeout
-	#toggle_inventory ()
+	GameManager.toggle_bag_requested.connect(toggle_inventory)
+	PlayerData.invetory_has_changed.connect(att_inventory)
+	att_inventory()
+
+func att_inventory():
+	var inventory = PlayerData.get_items()
+	if (inventory.is_empty()):
+		var empty_item = load("res://Resources/Items/EmptyItem.tres")
+		refresh_ui([empty_item])
+	else:
+		refresh_ui(inventory)
+
+func refresh_ui(inventory : Array[ItemData]):
+	for child in items_ui.get_children():
+		child.queue_free()
+	for item_data in inventory:
+		var item_frame = ITEM_FRAME.instantiate()
+		items_ui.add_child(item_frame)
+		item_frame.texture = item_data.img
 
 func toggle_inventory():
 	var tween = create_tween()

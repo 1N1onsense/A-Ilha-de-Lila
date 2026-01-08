@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bswdh5q3itud4"
-path="res://.godot/imported/Dice 8.png-1fa6b623f663f5fec3755f60a92dff52.ctex"
+uid="uid://0r26lrmsxoq2"
+path="res://.godot/imported/Meat.png-2f60c8eb920e5d2416c9780849b57671.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholder/Items/Dice 8.png"
-dest_files=["res://.godot/imported/Dice 8.png-1fa6b623f663f5fec3755f60a92dff52.ctex"]
+source_file="res://sprites/placeholder/Items/Meat.png"
+dest_files=["res://.godot/imported/Meat.png-2f60c8eb920e5d2416c9780849b57671.ctex"]
 
 [params]
 
