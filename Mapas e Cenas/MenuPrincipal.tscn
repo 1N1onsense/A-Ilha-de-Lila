@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://s6jquu3hwgqx"]
 
-[ext_resource type="Script" uid="uid://bpxp5107tsn5k" path="res://Script/MenuPrincipal.gd" id="1_ltsme"]
+[ext_resource type="Script" uid="uid://bpxp5107tsn5k" path="res://Scripts/MenuPrincipal.gd" id="1_ltsme"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kblji"]
 line_spacing = 0.0
@@ -23,7 +23,7 @@ offset_left = 346.0
 offset_top = 145.0
 offset_right = 905.0
 offset_bottom = 233.0
-text = "Novo Jogo"
+text = "A Ilha de Lila"
 label_settings = SubResource("LabelSettings_kblji")
 horizontal_alignment = 1
 vertical_alignment = 1
