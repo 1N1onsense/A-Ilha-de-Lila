@@ -1,6 +1,7 @@
 extends Node
 
 signal toggle_bag_requested
+var actual_transition: String = "start_game"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

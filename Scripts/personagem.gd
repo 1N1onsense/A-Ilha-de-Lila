@@ -2,6 +2,10 @@ extends CharacterBody2D
 const velocidade = 120
 var DirecaoAtual = "none"
 
+func set_face_direction(face_direction: String):
+	DirecaoAtual = face_direction
+	animacao(0)
+
 func _physics_process(delta: float) -> void:
 	movimento(delta)
 	move_and_slide()

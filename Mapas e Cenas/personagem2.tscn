@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://dqbkqeqlltltq"]
+[gd_scene load_steps=27 format=3 uid="uid://bq77gcna5jivg"]
 
 [ext_resource type="Script" uid="uid://hijn3w0ew60v" path="res://Scripts/personagem.gd" id="1_2nyoe"]
 [ext_resource type="Texture2D" uid="uid://uxit1tb4jfe8" path="res://sprites/Protagonista/prota2.png" id="2_2nyoe"]
+[ext_resource type="Script" uid="uid://dkdrvbkr8g5dd" path="res://Scripts/Camera_2d.gd" id="3_igh75"]
 [ext_resource type="PackedScene" uid="uid://da1k1ffhgawbl" path="res://Interaction Components/interacting_component.tscn" id="4_igh75"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ytnib"]
@@ -191,7 +192,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="personagem" type="CharacterBody2D"]
+[node name="personagem" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_2nyoe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -205,5 +206,6 @@ animation = &"parada-esquerda"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 3)
 zoom = Vector2(4, 4)
+script = ExtResource("3_igh75")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("4_igh75")]

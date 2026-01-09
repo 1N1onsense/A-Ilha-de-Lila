@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0wbt6pwwjpvt"]
+[gd_scene load_steps=9 format=3 uid="uid://b0wbt6pwwjpvt"]
 
 [ext_resource type="Texture2D" uid="uid://cxy32pi0vlt62" path="res://sprites/Tilesets/Beach-and-caves-tileset_ALL_by_AxulArt.png" id="1_y5ddf"]
 [ext_resource type="Texture2D" uid="uid://vfolsla7aesm" path="res://sprites/Tilesets/Beach-and-caves-tileset_by_AxulArt.png" id="2_6h0i3"]
-[ext_resource type="PackedScene" uid="uid://rkmrhh0mpmao" path="res://Mapas e Cenas/personagem.tscn" id="3_6h0i3"]
+[ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="3_6h0i3"]
+[ext_resource type="PackedScene" uid="uid://bw7ggvvngt0ai" path="res://Mapas e Cenas/TransitionBox.tscn" id="4_bgxmx"]
+[ext_resource type="PackedScene" uid="uid://dtmamtv0b6ewm" path="res://Mapas e Cenas/SpawnPoint.tscn" id="4_sle3v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgxmx"]
 texture = ExtResource("1_y5ddf")
@@ -507,5 +509,40 @@ layer_2/name = "ysort"
 layer_2/tile_data = PackedInt32Array(-196603, 65537, 0, -131067, 65537, 1, -65531, 65537, 2, -196602, 131073, 0, -131066, 131073, 1, -65530, 131073, 2, 65534, 65537, 0, 131070, 65537, 1, 196606, 65537, 2, 65535, 131073, 0, 131071, 131073, 1, 196607, 131073, 2, 131075, 196609, 1, 196611, 196609, 2, -196608, 196609, 1, -131072, 196609, 2, 196608, 327681, 1, -65533, 327681, 1, -65538, 327681, 1, 65540, 524289, 0, 65537, 196609, 0, -393212, 196609, 0, -458748, 196609, 0, -524284, 196609, 0, -589820, 196609, 0, -589823, 196609, 0, -524287, 196609, 0, -393215, 196609, 0, -458751, 196609, 0, -262141, 327681, 0, -327682, 327681, 1, -458745, 327681, 1, -327686, 65537, 0, -262150, 65537, 1, -196614, 65537, 2, -327685, 131073, 0, -262149, 131073, 1, -196613, 131073, 2, 196616, 65537, 0, 262152, 65537, 1, 327688, 65537, 2, 196617, 131073, 0, 262153, 131073, 1, 327689, 131073, 2, 196615, 327681, 1, -4, 327681, 1, 393217, 458753, 3, -131070, 458753, 3, -65542, 458753, 3, -196599, 458753, 3, -65528, 524289, 0, 196603, 524289, 0, -8, 327681, 0, 65527, 196609, 1, 131063, 196609, 2, -196617, 196609, 1, -131081, 196609, 2, -65522, 327681, 0)
 
 [node name="personagem" parent="." instance=ExtResource("3_6h0i3")]
-position = Vector2(30, -7)
-collision_layer = 2
+position = Vector2(33, -120)
+
+[node name="Transitions" type="Node2D" parent="."]
+
+[node name="Left Transition" parent="Transitions" instance=ExtResource("4_bgxmx")]
+position = Vector2(-186, -8)
+scale = Vector2(1, 4.2799997)
+
+[node name="Top Transition" parent="Transitions" instance=ExtResource("4_bgxmx")]
+position = Vector2(48.000004, -250)
+scale = Vector2(3.2000012, 1)
+next_scene = "uid://bxo3c6htt6wru"
+transition_name = "praia-sorvete"
+
+[node name="Right Transition" parent="Transitions" instance=ExtResource("4_bgxmx")]
+position = Vector2(298, -8)
+scale = Vector2(1, 4)
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="Center SpawnPoint" parent="SpawnPoints" instance=ExtResource("4_sle3v")]
+position = Vector2(48, 0)
+transition_name = "start_game"
+face_direction = "baixo"
+
+[node name="Top SpawnPoint" parent="SpawnPoints" instance=ExtResource("4_sle3v")]
+position = Vector2(48, -224)
+transition_name = "praia-sorvete"
+face_direction = "baixo"
+
+[node name="Left SpawnPoint" parent="SpawnPoints" instance=ExtResource("4_sle3v")]
+position = Vector2(-165, -9)
+face_direction = "direita"
+
+[node name="Right SpawnPoint" parent="SpawnPoints" instance=ExtResource("4_sle3v")]
+position = Vector2(276, -9)
+face_direction = "esquerda"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dkfbfn6du1ldd" path="res://sprites/placeholder/Items/Book.png" id="1_87idb"]
 [ext_resource type="Texture2D" uid="uid://yfbckeeckw4w" path="res://sprites/placeholder/Items/Bag.png" id="1_l28mc"]
-[ext_resource type="Script" uid="uid://tuk546w6fscy" path="res://Script/UI.gd" id="1_odhl8"]
+[ext_resource type="Script" uid="uid://tuk546w6fscy" path="res://Scripts/UI.gd" id="1_odhl8"]
 [ext_resource type="PackedScene" uid="uid://dbjcxi4une5lp" path="res://Mapas e Cenas/ItemFrame.tscn" id="3_bwm7u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87idb"]

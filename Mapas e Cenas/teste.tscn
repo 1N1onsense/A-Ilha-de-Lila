@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://7a4lbou2oclv"]
 
 [ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="1_1f1ij"]
-[ext_resource type="PackedScene" uid="uid://rkmrhh0mpmao" path="res://Mapas e Cenas/personagem2.tscn" id="2_1f1ij"]
+[ext_resource type="PackedScene" path="res://Mapas e Cenas/personagem2.tscn" id="2_1f1ij"]
 [ext_resource type="Texture2D" uid="uid://dlnuvlp3t4fmm" path="res://icon.svg" id="2_7tt4r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f1ij"]
