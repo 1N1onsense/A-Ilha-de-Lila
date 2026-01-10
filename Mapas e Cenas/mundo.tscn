@@ -24,7 +24,7 @@ layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(196608, 327681, 1, -65533, 327681, 1, -65538, 327681, 1, 65540, 524289, 0, 65537, 196609, 0, -393212, 196609, 0, -458748, 196609, 0, -524284, 196609, 0, -589820, 196609, 0, -589823, 196609, 0, -524287, 196609, 0, -393215, 196609, 0, -458751, 196609, 0, -262141, 327681, 0, -327682, 327681, 1, -458745, 327681, 1, 196615, 327681, 1, -4, 327681, 1, 393217, 458753, 3, -131070, 458753, 3, -65542, 458753, 3, -196599, 458753, 3, -65528, 524289, 0, 196603, 524289, 0, -8, 327681, 0, -65522, 327681, 0, 196616, 65537, 0, -196603, 65537, 0, 65534, 65537, 0, -327686, 65537, 0, 131075, 196609, 1, 65527, 196609, 1, -196608, 196609, 1)
 
 [node name="personagem" parent="." instance=ExtResource("3_6h0i3")]
-position = Vector2(33, -120)
+position = Vector2(168, 16)
 
 [node name="Transitions" type="Node2D" parent="."]
 
@@ -41,6 +41,8 @@ transition_name = "praia-sorvete"
 [node name="Right Transition" parent="Transitions" instance=ExtResource("4_bgxmx")]
 position = Vector2(298, -8)
 scale = Vector2(1, 4)
+next_scene = "uid://fj6207wfqgfd"
+transition_name = "praia-castelo"
 
 [node name="SpawnPoints" type="Node2D" parent="."]
 
@@ -60,4 +62,5 @@ face_direction = "direita"
 
 [node name="Right SpawnPoint" parent="SpawnPoints" instance=ExtResource("4_sle3v")]
 position = Vector2(276, -9)
+transition_name = "praia-castelo"
 face_direction = "esquerda"
