@@ -5,10 +5,6 @@
 [ext_resource type="Script" uid="uid://dkdrvbkr8g5dd" path="res://Scripts/Camera_2d.gd" id="3_igh75"]
 [ext_resource type="PackedScene" uid="uid://da1k1ffhgawbl" path="res://Interaction Components/interacting_component.tscn" id="4_igh75"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ytnib"]
-radius = 7.0
-height = 24.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_igh75"]
 atlas = ExtResource("2_2nyoe")
 region = Rect2(69, 0, 23, 32)
@@ -192,16 +188,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igh75"]
+size = Vector2(16.250011, 19.642836)
+
 [node name="personagem" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_2nyoe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
-shape = SubResource("CapsuleShape2D_ytnib")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8tupx")
-animation = &"parada-esquerda"
+animation = &"andar-baixo"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 3)
@@ -209,3 +204,8 @@ zoom = Vector2(4, 4)
 script = ExtResource("3_igh75")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("4_igh75")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.4999998, 9.5)
+scale = Vector2(0.79999936, 0.5600006)
+shape = SubResource("RectangleShape2D_igh75")

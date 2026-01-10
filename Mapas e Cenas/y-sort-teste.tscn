@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdo44mlh3opg7"]
+
+[ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_13482"]
+[ext_resource type="Script" uid="uid://hijn3w0ew60v" path="res://Scripts/personagem.gd" id="2_fxfgc"]
+[ext_resource type="Texture2D" uid="uid://dlnuvlp3t4fmm" path="res://icon.svg" id="3_j3yt7"]
+[ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="4_fxfgc"]
+
+[node name="YSortTeste" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+position = Vector2(64, 64)
+tile_set = ExtResource("1_13482")
+format = 2
+layer_0/name = "Ground"
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(-196612, 655360, 2, -131076, 655360, 2, -65540, 655360, 2, -4, 655360, 2, 65532, 655360, 2, 131068, 655360, 2, 196604, 655360, 2, -196611, 655360, 2, -196610, 655360, 2, -196609, 655360, 2, -262144, 655360, 2, -262143, 655360, 2, -262142, 655360, 2, -262141, 655360, 2, -262140, 655360, 2, -262139, 655360, 2, -262138, 655360, 2, -196602, 655360, 2, -131066, 655360, 2, -65530, 655360, 2, 6, 655360, 2, 65542, 655360, 2, 131078, 655360, 2, 131077, 655360, 2, 131076, 655360, 2, 131075, 655360, 2, 131074, 655360, 2, 131073, 655360, 2, 131072, 655360, 2, 196607, 655360, 2, 196606, 655360, 2, 196605, 655360, 2, 131069, 655360, 2, 131070, 655360, 2, 131071, 655360, 2, 65536, 655360, 2, 65537, 655360, 2, 65538, 655360, 2, 65539, 655360, 2, 65540, 655360, 2, 4, 655360, 2, 5, 655360, 2, 65541, 655360, 2, -65531, 655360, 2, -131067, 655360, 2, -131068, 655360, 2, -131069, 655360, 2, -131070, 655360, 2, -65534, 655360, 2, -65535, 655360, 2, 1, 655360, 2, 2, 655360, 2, 3, 655360, 2, -65533, 655360, 2, -196604, 655360, 2, -196605, 655360, 2, -65532, 655360, 2, -196603, 655360, 2, 0, 655360, 2, 65535, 655360, 2, -1, 655360, 2, -65536, 655360, 2, -131072, 655360, 2, -131071, 655360, 2, -196607, 655360, 2, -196606, 655360, 2, -196608, 655360, 2, -131073, 655360, 2, -131074, 655360, 2, -131075, 655360, 2, -3, 655360, 2, -2, 655360, 2, -65538, 655360, 2, 65533, 655360, 2, -65539, 655360, 2, 65534, 655360, 2, -65537, 655360, 2)
+layer_1/name = "Object"
+layer_1/y_sort_enabled = true
+layer_1/tile_data = PackedInt32Array(-131071, 327680, 0, -65532, 327680, 0, -65539, 65537, 0, -196603, 65537, 0)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(87, 70)
+script = ExtResource("2_fxfgc")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-9.25, 7.999996)
+scale = Vector2(0.09765626, 0.09375007)
+texture = ExtResource("3_j3yt7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(85, 50)
+zoom = Vector2(4, 4)
+
+[node name="personagem" parent="." instance=ExtResource("4_fxfgc")]
+position = Vector2(85, 79)
