@@ -4,7 +4,7 @@ extends StaticBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 const lines: Array[String] = [
-	"Sorvetes grátis em frente."
+	"Venha sem medo! Eu lhe estendo o tapete! Prossiga adiante para o mundo do sorvete!"
 ]
 
 func _ready() -> void:

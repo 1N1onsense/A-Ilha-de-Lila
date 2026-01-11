@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://fj6207wfqgfd"]
+[gd_scene load_steps=7 format=3 uid="uid://fj6207wfqgfd"]
 
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_onhjk"]
 [ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="2_28d7c"]
 [ext_resource type="PackedScene" uid="uid://bw7ggvvngt0ai" path="res://Mapas e Cenas/TransitionBox.tscn" id="3_q3hwq"]
 [ext_resource type="PackedScene" uid="uid://dtmamtv0b6ewm" path="res://Mapas e Cenas/SpawnPoint.tscn" id="4_20qm6"]
 [ext_resource type="PackedScene" uid="uid://duogc0yqqxq4w" path="res://Interaction Components/Components/Madeira.tscn" id="5_28d7c"]
+[ext_resource type="PackedScene" uid="uid://cq7sk205yb5tc" path="res://Interaction Components/Components/placa_norte.tscn" id="6_q3hwq"]
 
 [node name="MundoCasteloDeAreia" type="Node2D"]
 y_sort_enabled = true
@@ -76,3 +77,9 @@ face_direction = "baixo"
 
 [node name="Madeira" parent="." instance=ExtResource("5_28d7c")]
 position = Vector2(362, -114)
+
+[node name="placa_esquerda" parent="." instance=ExtResource("6_q3hwq")]
+position = Vector2(311, -56)
+
+[node name="placa_direita" parent="." instance=ExtResource("6_q3hwq")]
+position = Vector2(440, -56)
