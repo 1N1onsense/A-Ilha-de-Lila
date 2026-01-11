@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://d2tlrrvn7atex"]
 
-[ext_resource type="Texture2D" uid="uid://dqo06faxls8ey" path="res://sprites/placeholder/Items/feather.png" id="1_mppp1"]
+[ext_resource type="Texture2D" uid="uid://ddycx0xma6ptp" path="res://sprites/Objetos/Feather.png" id="1_mppp1"]
 [ext_resource type="Script" uid="uid://dcvwrx6vxt2xd" path="res://Scripts/ItemData.gd" id="2_3j0t3"]
 
 [resource]

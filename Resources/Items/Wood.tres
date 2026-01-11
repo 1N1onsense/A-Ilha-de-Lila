@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cxcmprkays8yl"]
+
+[ext_resource type="Texture2D" uid="uid://b6afd23uqgoyo" path="res://sprites/Objetos/Wood.png" id="1_p7oy7"]
+[ext_resource type="Script" uid="uid://dcvwrx6vxt2xd" path="res://Scripts/ItemData.gd" id="2_aypj5"]
+
+[resource]
+script = ExtResource("2_aypj5")
+nome = "Madeira"
+id = "wood"
+img = ExtResource("1_p7oy7")
+metadata/_custom_type_script = "uid://dcvwrx6vxt2xd"

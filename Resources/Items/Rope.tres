@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dypea02k2g1q"]
+
+[ext_resource type="Texture2D" uid="uid://qgfe1qi4oeqt" path="res://sprites/Objetos/Rope.png" id="1_nenar"]
+[ext_resource type="Script" uid="uid://dcvwrx6vxt2xd" path="res://Scripts/ItemData.gd" id="2_mnkao"]
+
+[resource]
+script = ExtResource("2_mnkao")
+nome = "Corda"
+id = "rope"
+img = ExtResource("1_nenar")
+metadata/_custom_type_script = "uid://dcvwrx6vxt2xd"
