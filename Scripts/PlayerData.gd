@@ -6,20 +6,6 @@ var inventory: Array [ItemData] = []
 
 func _ready() -> void:
 	print("PlayerData loaded")
-	
-	"""
-	var item = load("res://Resources/Items/Hourglass.tres")
-	add_item(item)
-	item = load("res://Resources/Items/PanFlute.tres")
-	add_item(item)
-	item = load("res://Resources/Items/PanFlute.tres")
-	add_item(item)
-	item = load("res://Resources/Items/RedGem.tres")
-	add_item(item)
-	item = load("res://Resources/Items/Book.tres")
-	add_item(item)
-	add_item(item)
-	"""
 
 func get_items() -> Array[ItemData]:
 	return inventory;

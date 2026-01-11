@@ -204,6 +204,7 @@ zoom = Vector2(4, 4)
 script = ExtResource("3_igh75")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("4_igh75")]
+position = Vector2(1, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.4999998, 9.5)

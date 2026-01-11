@@ -1,9 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://da1k1ffhgawbl"]
 
-[ext_resource type="Script" uid="uid://d2neee04x5urg" path="res://Scripts/interacting_component.gd" id="1_a6cu3"]
+[ext_resource type="Script" uid="uid://d2neee04x5urg" path="res://Scripts/InteractingComponent.gd" id="1_a6cu3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wjs5v"]
-radius = 28.071337
+radius = 14.035668
 
 [sub_resource type="LabelSettings" id="LabelSettings_a6cu3"]
 font_size = 12
@@ -28,11 +28,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -179.0
-offset_top = -84.0
+offset_top = -60.0
 offset_right = 179.0
-offset_bottom = -17.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 50
 text = "E para interagir"
 label_settings = SubResource("LabelSettings_a6cu3")
 horizontal_alignment = 1

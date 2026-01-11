@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://byan6mry3v3ev"]
+
+[ext_resource type="Script" uid="uid://ciynyl4yrbk1e" path="res://Scripts/Simon_Button.gd" id="1_nejng"]
+[ext_resource type="Texture2D" uid="uid://cnoueyhpexnon" path="res://sprites/Objetos/IceCreamAnim1.png" id="2_nejng"]
+[ext_resource type="Texture2D" uid="uid://co3yu72s7ume5" path="res://sprites/Objetos/IceCreamAnim2.png" id="3_i8wut"]
+[ext_resource type="PackedScene" uid="uid://ch6elmdrwvdup" path="res://Interaction Components/interactable.tscn" id="3_w25ck"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_26oxe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nejng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i8wut")
+}],
+"loop": true,
+"name": &"efeito",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfw35"]
+radius = 11.0
+
+[node name="Sorvete-Interactable" type="StaticBody2D"]
+script = ExtResource("1_nejng")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -11)
+sprite_frames = SubResource("SpriteFrames_26oxe")
+animation = &"efeito"
+frame_progress = 0.91773546
+
+[node name="Interactable" parent="." instance=ExtResource("3_w25ck")]
+interact_name = "E para Pressionar"
+is_interactable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_lfw35")
