@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq7sk205yb5tc"]
+
+[ext_resource type="Script" uid="uid://coyjc5gbdsc2k" path="res://Interaction Components/Components/placa_norte.gd" id="1_qyr08"]
+[ext_resource type="PackedScene" uid="uid://ch6elmdrwvdup" path="res://Interaction Components/interactable.tscn" id="3_kma6y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfw35"]
+radius = 23.769728
+
+[node name="placa_norte" type="StaticBody2D"]
+script = ExtResource("1_qyr08")
+
+[node name="Interactable" parent="." instance=ExtResource("3_kma6y")]
+interact_name = "Ler placa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_lfw35")

@@ -28,7 +28,7 @@ func display_text(text_to_display: String):
 		custom_minimum_size.y = size.y
 	
 	global_position.x -= (size.x / 2) * scale.x
-	global_position.y -= (size.y + 80) * scale.y
+	global_position.y -= (size.y + 40) * scale.y
 	
 	label.text = ""
 	_display_letter()

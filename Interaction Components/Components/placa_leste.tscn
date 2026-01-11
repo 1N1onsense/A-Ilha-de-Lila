@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8adrfbfnt0ws"]
+
+[ext_resource type="Script" uid="uid://24hg3tnlcnec" path="res://Interaction Components/Components/placa_leste.gd" id="1_808ua"]
+[ext_resource type="PackedScene" uid="uid://ch6elmdrwvdup" path="res://Interaction Components/interactable.tscn" id="2_14w52"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfw35"]
+radius = 23.769728
+
+[node name="placa_leste" type="StaticBody2D"]
+script = ExtResource("1_808ua")
+
+[node name="Interactable" parent="." instance=ExtResource("2_14w52")]
+interact_name = "Ler placa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_lfw35")
