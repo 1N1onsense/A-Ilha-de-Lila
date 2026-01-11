@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://w7dbua3keeyw"]
+
+[ext_resource type="Script" uid="uid://d4n3uer3ljcf7" path="res://text_box/text_box.gd" id="1_3sca5"]
+[ext_resource type="Texture2D" uid="uid://l5xomj8ov7i" path="res://text_box/Sem Título-1.png" id="1_25evf"]
+
+[node name="TextBox" type="MarginContainer"]
+offset_right = 32.0
+offset_bottom = 39.0
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_3sca5")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_25evf")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+vertical_alignment = 1
+
+[node name="LetterDisplayTime" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="LetterDisplayTime" to="." method="_on_letter_display_time_timeout"]

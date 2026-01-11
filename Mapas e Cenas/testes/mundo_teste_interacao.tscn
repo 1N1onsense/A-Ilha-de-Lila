@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxy32pi0vlt62" path="res://sprites/Tilesets/Beach-and-caves-tileset_ALL_by_AxulArt.png" id="1_0k8ih"]
 [ext_resource type="Texture2D" uid="uid://vfolsla7aesm" path="res://sprites/Tilesets/Beach-and-caves-tileset_by_AxulArt.png" id="2_7i5jg"]
-[ext_resource type="PackedScene" uid="uid://dqbkqeqlltltq" path="res://Mapas e Cenas/personagem2.tscn" id="3_hgqie"]
+[ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="3_hgqie"]
 [ext_resource type="PackedScene" uid="uid://dcgspoqad07ea" path="res://Interaction Components/Components/bixao.tscn" id="4_i6xcs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgxmx"]

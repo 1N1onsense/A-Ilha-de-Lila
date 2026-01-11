@@ -21,7 +21,7 @@ scale = Vector2(0.3125, 0.31249997)
 texture = ExtResource("2_eldtp")
 
 [node name="Interactable" parent="." instance=ExtResource("3_3ajat")]
-interact_name = "Gira o bixão"
+interact_name = "Falar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_lfw35")
