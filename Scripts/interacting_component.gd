@@ -12,6 +12,8 @@ func _input(event: InputEvent) -> void:
 			
 			await current_interactions[0].interact.call()
 			
+			if current_interactions[0].leave_interact:
+				return
 			can_interact = true
 
 func _process(_delta: float) -> void:
@@ -36,3 +38,4 @@ func _on_interact_range_area_entered(area: Area2D) -> void:
 # Remove interação ao sair do range
 func _on_interact_range_area_exited(area: Area2D) -> void:
 	current_interactions.erase(area)
+	can_interact = true
