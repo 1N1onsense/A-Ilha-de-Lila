@@ -5,7 +5,10 @@ extends StaticBody2D
 @export var item_data: ItemData
 
 func _ready() -> void:
-	interactable.interact = _on_interact
+	if PlayerData.search_removed_item(item_data):
+		queue_free()
+	else:
+		interactable.interact = _on_interact
 
 func _on_interact():
 	PlayerData.add_item(item_data)
