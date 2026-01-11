@@ -37,3 +37,5 @@ is_interactable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_lfw35")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

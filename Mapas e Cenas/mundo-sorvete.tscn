@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxo3c6htt6wru"]
+[gd_scene load_steps=14 format=3 uid="uid://bxo3c6htt6wru"]
 
-[ext_resource type="Script" uid="uid://ymy0leis5uwn" path="res://Scripts/SimonGameController.gd" id="1_25pgg"]
+[ext_resource type="Script" path="res://Scripts/SimonGameController.gd" id="1_25pgg"]
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_em4n2"]
 [ext_resource type="PackedScene" uid="uid://byan6mry3v3ev" path="res://Interaction Components/Components/Sorvete.tscn" id="5_25pgg"]
 [ext_resource type="PackedScene" uid="uid://hm6cdtmc4b0w" path="res://Interaction Components/Components/TresSorvetes.tscn" id="7_j5qot"]
+[ext_resource type="AudioStream" uid="uid://brewpv5tg4xj6" path="res://Sons/genius/sorvete1.ogg" id="8_136tn"]
 [ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="9_jk1vq"]
+[ext_resource type="AudioStream" uid="uid://b2vlnrjgkjdr3" path="res://Sons/genius/sorvete2.ogg" id="9_nryca"]
 [ext_resource type="PackedScene" uid="uid://bw7ggvvngt0ai" path="res://Mapas e Cenas/TransitionBox.tscn" id="10_fpst1"]
+[ext_resource type="AudioStream" uid="uid://0l2bghwwwtta" path="res://Sons/genius/sorvete3.ogg" id="10_jk1vq"]
 [ext_resource type="PackedScene" uid="uid://dtmamtv0b6ewm" path="res://Mapas e Cenas/SpawnPoint.tscn" id="11_0ba7c"]
+[ext_resource type="AudioStream" uid="uid://bf3esjrgbypb2" path="res://Sons/genius/sorvete4.ogg" id="11_ct64x"]
+[ext_resource type="AudioStream" uid="uid://br5q0ohsgniea" path="res://Sons/genius/sorvete5.ogg" id="12_jti0j"]
+[ext_resource type="AudioStream" uid="uid://ck6u5d4kgp6m4" path="res://Sons/genius/sorvete6.ogg" id="13_8v1kq"]
 
 [node name="MundoSorvete" type="Node2D"]
 y_sort_enabled = true
@@ -56,22 +62,47 @@ button_id = -1
 [node name="Light-Blue" parent="Sorvetes-Interactable" instance=ExtResource("5_25pgg")]
 position = Vector2(16, 0)
 
+[node name="AudioStreamPlayer2D" parent="Sorvetes-Interactable/Light-Blue" index="2"]
+stream = ExtResource("8_136tn")
+
 [node name="Red" parent="Sorvetes-Interactable" instance=ExtResource("5_25pgg")]
 position = Vector2(80, 0)
 button_id = 1
+
+[node name="AudioStreamPlayer2D" parent="Sorvetes-Interactable/Red" index="2"]
+stream = ExtResource("9_nryca")
 
 [node name="Pink" parent="Sorvetes-Interactable" instance=ExtResource("5_25pgg")]
 position = Vector2(160, 0)
 button_id = 2
 
+[node name="AudioStreamPlayer2D" parent="Sorvetes-Interactable/Pink" index="2"]
+stream = ExtResource("10_jk1vq")
+
 [node name="Yellow" parent="Sorvetes-Interactable" instance=ExtResource("5_25pgg")]
 position = Vector2(224, 0)
 button_id = 3
+
+[node name="AudioStreamPlayer2D" parent="Sorvetes-Interactable/Yellow" index="2"]
+stream = ExtResource("11_ct64x")
 
 [node name="Brown" parent="Sorvetes-Interactable" instance=ExtResource("5_25pgg")]
 position = Vector2(48, 48)
 button_id = 4
 
+[node name="AudioStreamPlayer2D" parent="Sorvetes-Interactable/Brown" index="2"]
+stream = ExtResource("12_jti0j")
+
 [node name="Dark-Blue" parent="Sorvetes-Interactable" instance=ExtResource("5_25pgg")]
 position = Vector2(192, 48)
 button_id = 5
+
+[node name="AudioStreamPlayer2D" parent="Sorvetes-Interactable/Dark-Blue" index="2"]
+stream = ExtResource("13_8v1kq")
+
+[editable path="Sorvetes-Interactable/Light-Blue"]
+[editable path="Sorvetes-Interactable/Red"]
+[editable path="Sorvetes-Interactable/Pink"]
+[editable path="Sorvetes-Interactable/Yellow"]
+[editable path="Sorvetes-Interactable/Brown"]
+[editable path="Sorvetes-Interactable/Dark-Blue"]
