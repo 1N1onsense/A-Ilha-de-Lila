@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfs6p7ptrptci"]
+
+[ext_resource type="AudioStream" uid="uid://ceoe5e243d68d" path="res://Sons/musica/Lila.ogg" id="1_s3aae"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_s3aae")
+volume_db = -5.0
+autoplay = true
