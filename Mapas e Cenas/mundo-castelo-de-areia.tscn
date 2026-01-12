@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bw7ggvvngt0ai" path="res://Mapas e Cenas/TransitionBox.tscn" id="3_q3hwq"]
 [ext_resource type="PackedScene" uid="uid://dtmamtv0b6ewm" path="res://Mapas e Cenas/SpawnPoint.tscn" id="4_20qm6"]
 [ext_resource type="PackedScene" uid="uid://duogc0yqqxq4w" path="res://Interaction Components/Components/Madeira.tscn" id="5_28d7c"]
-[ext_resource type="PackedScene" uid="uid://dnjrlfhodcipy" path="res://Mapas e Cenas/Ovelha.tscn" id="6_q3hwq"]
+[ext_resource type="PackedScene" uid="uid://d2wgtlthlrl6g" path="res://Interaction Components/Components/Ovelhas/Ovelha_castelo.tscn" id="6_q3hwq"]
 
 [node name="MundoCasteloDeAreia" type="Node2D"]
 y_sort_enabled = true
@@ -79,4 +79,4 @@ face_direction = "baixo"
 position = Vector2(362, -114)
 
 [node name="Ovelha" parent="." instance=ExtResource("6_q3hwq")]
-position = Vector2(306, -51)
+position = Vector2(299, -56)
