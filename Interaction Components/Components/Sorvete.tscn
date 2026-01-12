@@ -34,6 +34,7 @@ frame_progress = 0.91773546
 [node name="Interactable" parent="." instance=ExtResource("3_w25ck")]
 interact_name = "E para Pressionar"
 is_interactable = false
+leave_interact = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("CircleShape2D_lfw35")

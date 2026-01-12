@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwqelyj8m84ot"]
+[gd_scene load_steps=6 format=3 uid="uid://d2lgw7nhdfxlw"]
 
 [ext_resource type="Script" uid="uid://b7nsdi7k7bl8u" path="res://Scripts/CollectableItem.gd" id="1_tm4rk"]
-[ext_resource type="Resource" uid="uid://ducl8a52ux2xw" path="res://Resources/Items/Shell.tres" id="2_tm4rk"]
+[ext_resource type="Resource" path="res://Resources/Items/Shell.tres" id="2_tm4rk"]
 [ext_resource type="Texture2D" uid="uid://bdgjej5fibvrx" path="res://sprites/Objetos/Concha.png" id="3_s5vrd"]
 [ext_resource type="PackedScene" uid="uid://ch6elmdrwvdup" path="res://Interaction Components/interactable.tscn" id="4_mu1qb"]
 

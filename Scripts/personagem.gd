@@ -10,16 +10,16 @@ func _physics_process(delta: float) -> void:
 	movimento(delta)
 	move_and_slide()
 	
-func movimento(delta):
+func movimento(_delta):
 	# Variável para poder trocar de andar -> correr
 	var VelocidadeAtual = velocidade
 	
 	# Se apertar shift aumenta velocidade
 	if Input.is_action_pressed("ui_shift"):
 		VelocidadeAtual = velocidade * 1.5
-		
+
 	var esta_movendo = false # Flag pra saber se tá se movendo
-		
+	
 	if Input.is_action_pressed("ui_right"):
 		DirecaoAtual = "direita"
 		esta_movendo = true

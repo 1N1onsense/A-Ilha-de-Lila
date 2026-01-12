@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnjrlfhodcipy"]
+
+[ext_resource type="Texture2D" uid="uid://bdmcxk2kuewx" path="res://sprites/Ovelha/Happy@18.png" id="1_7apc3"]
+[ext_resource type="Texture2D" uid="uid://dy2h1e8icj1u1" path="res://sprites/Ovelha/Sheep@18.png" id="2_ndpd8"]
+[ext_resource type="PackedScene" uid="uid://ch6elmdrwvdup" path="res://Interaction Components/interactable.tscn" id="3_88xml"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d84wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7apc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ndpd8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_14fu7"]
+radius = 9.0
+
+[node name="Ovelha" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_d84wd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_14fu7")
+
+[node name="Interactable" parent="." instance=ExtResource("3_88xml")]
