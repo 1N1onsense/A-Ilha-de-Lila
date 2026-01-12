@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtmamtv0b6ewm" path="res://Mapas e Cenas/SpawnPoint.tscn" id="4_pap0s"]
 [ext_resource type="PackedScene" uid="uid://d2lgw7nhdfxlw" path="res://Interaction Components/Components/Concha.tscn" id="5_pap0s"]
 [ext_resource type="PackedScene" uid="uid://cd0emc2iuvvw8" path="res://Interaction Components/Components/Ovelhas/Ovelha_guardaSol.tscn" id="6_repco"]
-[ext_resource type="Resource" path="res://Resources/Items/Shell.tres" id="7_ctiie"]
+[ext_resource type="Resource" uid="uid://ducl8a52ux2xw" path="res://Resources/Items/Shell.tres" id="7_ctiie"]
 [ext_resource type="Resource" uid="uid://dypea02k2g1q" path="res://Resources/Items/Rope.tres" id="8_rj5hd"]
 [ext_resource type="PackedScene" uid="uid://c7mrhku10npi8" path="res://Interaction Components/Components/Corda.tscn" id="9_nj65t"]
 
