@@ -12,7 +12,6 @@ func _input(event: InputEvent) -> void:
 			
 			await current_interactions[0].interact.call()
 			
-			
 			if current_interactions[0].leave_interact:
 				return
 			can_interact = true

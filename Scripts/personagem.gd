@@ -1,23 +1,33 @@
 extends CharacterBody2D
 const velocidade = 120
 var DirecaoAtual = "none"
+var pode_mover = true
 
 func set_face_direction(face_direction: String):
 	DirecaoAtual = face_direction
 	animacao(0)
+
+func _ready():
+	DialogManager.dialog_started.connect(_on_dialog_started)
+	DialogManager.dialog_finished.connect(_on_dialog_finished)
 
 func _physics_process(delta: float) -> void:
 	movimento(delta)
 	move_and_slide()
 	
 func movimento(_delta):
+	# SE NÃO PODE MOVER, PARA TUDO E RETORNA
+	if !pode_mover:
+		velocity = Vector2.ZERO
+		animacao(0)
+		return
+	
 	# Variável para poder trocar de andar -> correr
 	var VelocidadeAtual = velocidade
 	
 	# Se apertar shift aumenta velocidade
 	if Input.is_action_pressed("ui_shift"):
 		VelocidadeAtual = velocidade * 1.5
-
 	var esta_movendo = false # Flag pra saber se tá se movendo
 	
 	if Input.is_action_pressed("ui_right"):
@@ -100,3 +110,10 @@ func animacao(mov):
 			anim.play("andar-baixo")
 		elif mov == 0:
 			anim.play("parada-baixo")
+
+# FUNÇÕES DOS SINAIS
+func _on_dialog_started():
+	pode_mover = false
+
+func _on_dialog_finished():
+	pode_mover = true

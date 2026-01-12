@@ -10,7 +10,7 @@ var has_wood = PlayerData.search_item(wood) != -1
 var has_rope = PlayerData.search_item(rope) != -1
 var has_sail = PlayerData.search_item(sail) != -1
 
-var ultima_fala_foi_1 = false
+var ultima_fala = 0
 
 const lines: Array[String] = [
 	"Peixinha, peixinha! Você está perdida?",
@@ -25,15 +25,11 @@ const lines: Array[String] = [
 	"Use 'I' para abrir o seu inventário"
 ]
 
-const line_1: Array[String] = [
-	"Boa Peixinha, no ritmo e no compasso!",
-	"Está indo bem, pronta para o próximo passo?"
-]
-
-const line_2: Array[String] = [
-	"A ilha é bonita e bem relaxante.",
-	"Se quiser, aprecie por um instante."
-]
+const line_1: Array[String] = ["Boa Peixinha, no ritmo e no compasso!", "Está indo bem, pronta para o próximo passo?"]
+const line_2: Array[String] = ["A ilha é bonita e bem relaxante", "Se quiser, aprecie por um instante"]
+const line_3: Array[String] = ["Eu? Sou sua amiga do coração", "Por isso que sempre ajudei até então"]
+const line_4: Array[String] = ["Porque eu falo desse jeito?", "Eu sou uma ovelha de conceito"]
+const line_5: Array[String] = ["Se não conseguir de primeira, não desista", "Para cada desafio dessa ilha, há uma pista"]
 
 func _ready() -> void:
 	animated_sprite_2d.play("dormindo")
@@ -46,12 +42,13 @@ func _on_interact():
 	animated_sprite_2d.play("acordado")
 	
 	if has_rope or has_sail or has_wood:
-		if ultima_fala_foi_1:
-			DialogManager.start_dialog(global_position, line_2)
-			ultima_fala_foi_1 = false
-		else:
-			DialogManager.start_dialog(global_position, line_1)
-			ultima_fala_foi_1 = true
+		match ultima_fala:
+			0: DialogManager.start_dialog(global_position, line_1)
+			1: DialogManager.start_dialog(global_position, line_2)
+			2: DialogManager.start_dialog(global_position, line_3)
+			3: DialogManager.start_dialog(global_position, line_4)
+			4: DialogManager.start_dialog(global_position, line_5)
+		ultima_fala = (ultima_fala + 1) % 5
 	else:
 		DialogManager.start_dialog(global_position, lines)
 
