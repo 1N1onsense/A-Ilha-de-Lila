@@ -8,22 +8,24 @@ var ja_interagiu_primeira_vez = false
 var ja_entregou_concha = false
 
 const lines_inicial: Array[String] = [
-	"Olá de novo, pequena peixinha, eu disse que estaria com você sempre",
-	"Eu sempre cumpro o que prometo, Lila",
-	"Agora, sua missão aqui é achar uma Concha Dourada",
-	"Eu sei que o ambiente ao seu redor está uma bagunça, mas não esqueça o que realmente importa",
-	"Se você focar no que peço, te darei tudo o que você precisa"
+	"Oi peixinha! Estou aqui pra te ver!",
+	"Pois disse que sempre estaria com você",
+	"Eu prometi e sempre cumpro promessa dada",
+	"Sua próxima missão? Achar a concha dourada!",
+	"Desculpe pela bagunça... Eu espero que não se importe...",
+	"Eu confio em você, pequenina! Foque na missão e boa sorte!"
 ]
 
 const lines_com_concha: Array[String] = [
-	"Que rápido, você já encontrou a Concha Dourada",
-	"Muito bem, Lila. Você está indo pelo caminho certo",
-	"Se você reparar a sua bolsa, eu transformei a Concha em uma Corda"
+	"Lila, minha peixinha! Você é fenomenal!",
+	"Achou a concha rápido naquela bagunça brutal!",
+	"Aqui vem a mágica, abra a mochila e vá olhar....",
+	"Não tem mais concha, agora é uma corda pra amarrar!" 
 ]
 
 const lines_sem_concha: Array[String] = [
-	"Você ainda não encontrou a Concha Dourada",
-	"Continue procurando, pequena peixinha"
+	"Quem arrumou esse lugar? Pra organização não liga?",
+	"Mas de onde danado que está essa concha da bexiga?"
 ]
 
 func _ready() -> void:

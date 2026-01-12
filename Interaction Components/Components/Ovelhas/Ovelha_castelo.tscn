@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2wgtlthlrl6g"]
+
+[ext_resource type="Script" uid="uid://coh711vtie6ly" path="res://Interaction Components/Components/Ovelhas/ovelha_castelo.gd" id="1_obt0n"]
+[ext_resource type="Texture2D" uid="uid://dy2h1e8icj1u1" path="res://sprites/Ovelha/Sheep@18.png" id="2_ccoc7"]
+[ext_resource type="Texture2D" uid="uid://bdmcxk2kuewx" path="res://sprites/Ovelha/Happy@18.png" id="3_gpqmd"]
+[ext_resource type="PackedScene" uid="uid://ch6elmdrwvdup" path="res://Interaction Components/interactable.tscn" id="4_sffif"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5dp8y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ccoc7")
+}],
+"loop": true,
+"name": &"acordado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gpqmd")
+}],
+"loop": true,
+"name": &"dormindo",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1nd3y"]
+radius = 12.0415945
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfw35"]
+radius = 28.0
+
+[node name="Ovelha" type="StaticBody2D"]
+script = ExtResource("1_obt0n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.000001, 3.000001)
+scale = Vector2(1.3333333, 1.3333333)
+sprite_frames = SubResource("SpriteFrames_5dp8y")
+animation = &"dormindo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 3)
+shape = SubResource("CircleShape2D_1nd3y")
+
+[node name="Interactable" parent="." instance=ExtResource("4_sffif")]
+interact_name = "Falar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(3, 4)
+shape = SubResource("CircleShape2D_lfw35")

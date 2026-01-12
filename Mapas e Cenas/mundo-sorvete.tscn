@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bxo3c6htt6wru"]
 
-[ext_resource type="Script" path="res://Scripts/SimonGameController.gd" id="1_25pgg"]
+[ext_resource type="Script" uid="uid://ymy0leis5uwn" path="res://Scripts/SimonGameController.gd" id="1_25pgg"]
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_em4n2"]
 [ext_resource type="PackedScene" uid="uid://byan6mry3v3ev" path="res://Interaction Components/Components/Sorvete.tscn" id="5_25pgg"]
 [ext_resource type="PackedScene" uid="uid://hm6cdtmc4b0w" path="res://Interaction Components/Components/TresSorvetes.tscn" id="7_j5qot"]
@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bf3esjrgbypb2" path="res://Sons/genius/sorvete4.ogg" id="11_ct64x"]
 [ext_resource type="AudioStream" uid="uid://br5q0ohsgniea" path="res://Sons/genius/sorvete5.ogg" id="12_jti0j"]
 [ext_resource type="AudioStream" uid="uid://ck6u5d4kgp6m4" path="res://Sons/genius/sorvete6.ogg" id="13_8v1kq"]
-[ext_resource type="PackedScene" uid="uid://cuv8w253fniis" path="res://Interaction Components/Components/placa_sorvetes.tscn" id="14_nryca"]
+[ext_resource type="PackedScene" uid="uid://cm0op4vie8rbu" path="res://Interaction Components/Components/Ovelhas/Ovelha_sorvete.tscn" id="14_nryca"]
 
 [node name="MundoSorvete" type="Node2D"]
 y_sort_enabled = true
@@ -33,7 +33,7 @@ layer_2/z_index = -1
 layer_2/tile_data = PackedInt32Array(524290, 524289, 0, 131076, 524289, 0, 196624, 524289, 0, 393239, 524289, 0, 131084, 524289, 0, 327687, 524289, 0, 524308, 524289, 0, 65559, 458752, 3, 131075, 458752, 3, 589831, 458752, 3, 458771, 458752, 3, 17, 458752, 3, 524299, 524288, 0)
 layer_3/name = "ysort"
 layer_3/y_sort_enabled = true
-layer_3/tile_data = PackedInt32Array(393233, 2, 0, 196623, 7, 0, 196627, 6, 0, 196618, 4, 0, 393224, 5, 0, 196614, 3, 0, 524301, 327681, 0)
+layer_3/tile_data = PackedInt32Array(393233, 2, 0, 196623, 7, 0, 196627, 6, 0, 196618, 4, 0, 393224, 5, 0, 196614, 3, 0)
 
 [node name="personagem" parent="." instance=ExtResource("9_jk1vq")]
 position = Vector2(207, 192)
@@ -101,8 +101,8 @@ button_id = 5
 [node name="AudioStreamPlayer2D" parent="Sorvetes-Interactable/Dark-Blue" index="2"]
 stream = ExtResource("13_8v1kq")
 
-[node name="placa_oeste" parent="." instance=ExtResource("14_nryca")]
-position = Vector2(216, 136)
+[node name="Ovelha" parent="." instance=ExtResource("14_nryca")]
+position = Vector2(171, 156)
 
 [editable path="Sorvetes-Interactable/Light-Blue"]
 [editable path="Sorvetes-Interactable/Red"]
