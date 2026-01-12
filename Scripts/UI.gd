@@ -10,6 +10,7 @@ func _ready():
 	panel.modulate.a = 0
 	GameManager.toggle_bag_requested.connect(toggle_inventory)
 	PlayerData.invetory_has_changed.connect(att_inventory)
+	PlayerData.invetory_has_changed.connect(animate_inventory)
 	att_inventory()
 
 func att_inventory():
@@ -19,6 +20,13 @@ func att_inventory():
 		refresh_ui([empty_item])
 	else:
 		refresh_ui(inventory)
+
+
+func animate_inventory():
+	if !inventory_is_open:
+		toggle_inventory()
+		await get_tree().create_timer(1.5).timeout
+		toggle_inventory()
 
 func refresh_ui(inventory : Array[ItemData]):
 	for child in items_ui.get_children():

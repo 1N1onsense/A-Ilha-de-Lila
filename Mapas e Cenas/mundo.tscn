@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0wbt6pwwjpvt"]
+[gd_scene load_steps=11 format=3 uid="uid://b0wbt6pwwjpvt"]
 
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_bgxmx"]
 [ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="3_6h0i3"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c7xosdcbibs5g" path="res://Interaction Components/Components/placa_oeste.tscn" id="6_k1b5m"]
 [ext_resource type="PackedScene" uid="uid://c8adrfbfnt0ws" path="res://Interaction Components/Components/placa_leste.tscn" id="7_m2cts"]
 [ext_resource type="PackedScene" uid="uid://bf3fiivl3tclb" path="res://Interaction Components/Components/Ovelhas/Ovelha_mundo.tscn" id="8_m2cts"]
+[ext_resource type="PackedScene" uid="uid://ckr3krssk1id2" path="res://Interaction Components/Components/placa_barco.tscn" id="9_42t5j"]
+[ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="10_d6hka"]
 
 [node name="mundo2" type="Node2D"]
 y_sort_enabled = true
@@ -28,7 +30,7 @@ layer_2/z_index = -1
 layer_2/tile_data = PackedInt32Array(-65528, 524289, 0, 196603, 524289, 0, -327670, 524289, 0, -196612, 524289, 0, 262154, 524289, 0, 393216, 524289, 0, 327684, 524289, 0, 65539, 524289, 0)
 layer_3/name = "ysort"
 layer_3/y_sort_enabled = true
-layer_3/tile_data = PackedInt32Array(196608, 327681, 1, -393212, 196609, 0, -458748, 196609, 0, -524284, 196609, 0, -589820, 196609, 0, -589823, 196609, 0, -524287, 196609, 0, -393215, 196609, 0, -458751, 196609, 0, -327682, 327681, 1, -458745, 327681, 1, -65542, 458753, 3, -196599, 458753, 3, 196616, 65537, 0, -327686, 65537, 0, 65527, 196609, 1, -327676, 327681, 0, -131081, 327681, 0, -196593, 327681, 0, 65542, 458753, 3, -196603, 65537, 0, 131065, 327681, 1, 65533, 65537, 0, -262144, 196609, 1, 65536, 196609, 0, 2, 327681, 1, 131076, 196609, 1, -131075, 327681, 1, -131072, 458753, 3)
+layer_3/tile_data = PackedInt32Array(196608, 327681, 1, -393212, 196609, 0, -458748, 196609, 0, -524284, 196609, 0, -589820, 196609, 0, -589823, 196609, 0, -524287, 196609, 0, -393215, 196609, 0, -458751, 196609, 0, -327682, 327681, 1, -458745, 327681, 1, -65542, 458753, 3, -196599, 458753, 3, 196616, 65537, 0, -327686, 65537, 0, 65527, 196609, 1, -327676, 327681, 0, -131081, 327681, 0, -196593, 327681, 0, 65542, 458753, 3, -196603, 65537, 0, 131065, 327681, 1, 65533, 65537, 0, -262144, 196609, 1, 65536, 196609, 0, 2, 327681, 1, 131076, 196609, 1, -131075, 327681, 1, -131072, 458753, 3, 458752, 327681, 0)
 
 [node name="personagem" parent="." instance=ExtResource("3_6h0i3")]
 position = Vector2(46, 63)
@@ -86,3 +88,8 @@ position = Vector2(248, -40)
 
 [node name="Ovelha" parent="." instance=ExtResource("8_m2cts")]
 position = Vector2(94, 95)
+
+[node name="placa_barco" parent="." instance=ExtResource("9_42t5j")]
+position = Vector2(6, 125)
+
+[node name="Ui" parent="." instance=ExtResource("10_d6hka")]
