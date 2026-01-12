@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6f4goq8odmob"]
+[gd_scene load_steps=10 format=3 uid="uid://b6f4goq8odmob"]
 
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_kmh7o"]
 [ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="2_lssek"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cd0emc2iuvvw8" path="res://Interaction Components/Components/Ovelhas/Ovelha_guardaSol.tscn" id="6_repco"]
 [ext_resource type="Resource" uid="uid://ducl8a52ux2xw" path="res://Resources/Items/Shell.tres" id="7_ctiie"]
 [ext_resource type="Resource" uid="uid://dypea02k2g1q" path="res://Resources/Items/Rope.tres" id="8_rj5hd"]
+[ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="9_ctiie"]
 
 [node name="MundoGuardaSol" type="Node2D"]
 y_sort_enabled = true
@@ -55,3 +56,5 @@ position = Vector2(416, 48)
 position = Vector2(377, 79)
 concha_dourada = ExtResource("7_ctiie")
 item_recompensa = ExtResource("8_rj5hd")
+
+[node name="Ui" parent="." instance=ExtResource("9_ctiie")]

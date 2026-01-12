@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0wbt6pwwjpvt"]
+[gd_scene load_steps=11 format=3 uid="uid://b0wbt6pwwjpvt"]
 
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_bgxmx"]
 [ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="3_6h0i3"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8adrfbfnt0ws" path="res://Interaction Components/Components/placa_leste.tscn" id="7_m2cts"]
 [ext_resource type="PackedScene" uid="uid://bf3fiivl3tclb" path="res://Interaction Components/Components/Ovelhas/Ovelha_mundo.tscn" id="8_m2cts"]
 [ext_resource type="PackedScene" uid="uid://ckr3krssk1id2" path="res://Interaction Components/Components/placa_barco.tscn" id="9_42t5j"]
+[ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="10_d6hka"]
 
 [node name="mundo2" type="Node2D"]
 y_sort_enabled = true
@@ -90,3 +91,5 @@ position = Vector2(94, 95)
 
 [node name="placa_barco" parent="." instance=ExtResource("9_42t5j")]
 position = Vector2(6, 125)
+
+[node name="Ui" parent="." instance=ExtResource("10_d6hka")]

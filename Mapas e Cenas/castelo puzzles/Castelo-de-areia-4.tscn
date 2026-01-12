@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://2iy2f57nmhba"]
+[gd_scene load_steps=6 format=3 uid="uid://2iy2f57nmhba"]
 
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_hskrl"]
 [ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="2_r8klx"]
 [ext_resource type="PackedScene" uid="uid://dtmamtv0b6ewm" path="res://Mapas e Cenas/SpawnPoint.tscn" id="3_amu3f"]
 [ext_resource type="PackedScene" uid="uid://bw7ggvvngt0ai" path="res://Mapas e Cenas/TransitionBox.tscn" id="4_rikdi"]
+[ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="5_r8klx"]
 
 [node name="CasteloDeAreia4" type="Node2D"]
 y_sort_enabled = true
@@ -56,3 +57,5 @@ position = Vector2(137, 170)
 scale = Vector2(4, 1)
 next_scene = "uid://fj6207wfqgfd"
 transition_name = "baixo-castelo"
+
+[node name="Ui" parent="." instance=ExtResource("5_r8klx")]

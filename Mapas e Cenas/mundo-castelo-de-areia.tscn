@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://fj6207wfqgfd"]
+[gd_scene load_steps=8 format=3 uid="uid://fj6207wfqgfd"]
 
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_onhjk"]
 [ext_resource type="PackedScene" uid="uid://bq77gcna5jivg" path="res://Mapas e Cenas/personagem2.tscn" id="2_28d7c"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtmamtv0b6ewm" path="res://Mapas e Cenas/SpawnPoint.tscn" id="4_20qm6"]
 [ext_resource type="PackedScene" uid="uid://duogc0yqqxq4w" path="res://Interaction Components/Components/Madeira.tscn" id="5_28d7c"]
 [ext_resource type="PackedScene" uid="uid://d2wgtlthlrl6g" path="res://Interaction Components/Components/Ovelhas/Ovelha_castelo.tscn" id="6_q3hwq"]
+[ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="7_20qm6"]
 
 [node name="MundoCasteloDeAreia" type="Node2D"]
 y_sort_enabled = true
@@ -80,3 +81,5 @@ position = Vector2(362, -114)
 
 [node name="Ovelha" parent="." instance=ExtResource("6_q3hwq")]
 position = Vector2(299, -56)
+
+[node name="Ui" parent="." instance=ExtResource("7_20qm6")]
