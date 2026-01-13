@@ -16,6 +16,8 @@ const lines: Array[String] = [
 	"Mas para sair daqui... Por alguns perrengues você deve passar...",
 	"Eu sei que está ansiosa, mas leia cada placa com atenção",
 	"Resolva os desafios e pegue os materias para fazer a construção...",
+	"Quando coletar todos os itens, esteja ciente!",
+	"Termine a jangada lendo a placa na sua frente!",
 	"De uma bela jangada, pilar por pilar",
 	"E então navegaremos daqui para o mar!",
 	"Nosso conto será épico e hilário!",
