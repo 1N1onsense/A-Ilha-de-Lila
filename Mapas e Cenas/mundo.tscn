@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c7xosdcbibs5g" path="res://Interaction Components/Components/placa_oeste.tscn" id="6_k1b5m"]
 [ext_resource type="PackedScene" uid="uid://c8adrfbfnt0ws" path="res://Interaction Components/Components/placa_leste.tscn" id="7_m2cts"]
 [ext_resource type="PackedScene" uid="uid://bf3fiivl3tclb" path="res://Interaction Components/Components/Ovelhas/Ovelha_mundo.tscn" id="8_m2cts"]
-[ext_resource type="PackedScene" path="res://Interaction Components/Components/placa_barco.tscn" id="9_42t5j"]
+[ext_resource type="PackedScene" uid="uid://ckr3krssk1id2" path="res://Interaction Components/Components/placa_barco.tscn" id="9_42t5j"]
 [ext_resource type="PackedScene" uid="uid://btrackenppdkg" path="res://Mapas e Cenas/UI.tscn" id="10_d6hka"]
 
 [node name="mundo2" type="Node2D"]
