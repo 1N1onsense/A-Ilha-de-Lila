@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://bxo3c6htt6wru"]
 
-[ext_resource type="Script" path="res://Scripts/SimonGameController.gd" id="1_25pgg"]
+[ext_resource type="Script" uid="uid://ymy0leis5uwn" path="res://Scripts/SimonGameController.gd" id="1_25pgg"]
 [ext_resource type="TileSet" uid="uid://cd5lwjnhb4w8x" path="res://sprites/Tilesets/Praia-Tileset.tres" id="1_em4n2"]
 [ext_resource type="PackedScene" uid="uid://byan6mry3v3ev" path="res://Interaction Components/Components/Sorvete.tscn" id="5_25pgg"]
 [ext_resource type="PackedScene" uid="uid://hm6cdtmc4b0w" path="res://Interaction Components/Components/TresSorvetes.tscn" id="7_j5qot"]
