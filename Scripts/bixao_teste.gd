@@ -6,11 +6,8 @@ var wood = preload("res://Resources/Items/Wood.tres")
 var rope = preload("res://Resources/Items/Rope.tres")
 var sail = preload("res://Resources/Items/Sail.tres")
 
-var has_wood = PlayerData.search_item(wood) != -1
-var has_rope = PlayerData.search_item(rope) != -1
-var has_sail = PlayerData.search_item(sail) != -1
-
 var ultima_fala = 0
+var fez_tutorial = false
 
 const lines: Array[String] = [
 	"Peixinha, peixinha! Você está perdida?",
@@ -41,7 +38,7 @@ func _ready() -> void:
 func _on_interact():
 	animated_sprite_2d.play("acordado")
 	
-	if has_rope or has_sail or has_wood:
+	if fez_tutorial:
 		match ultima_fala:
 			0: DialogManager.start_dialog(global_position, line_1)
 			1: DialogManager.start_dialog(global_position, line_2)
@@ -51,6 +48,7 @@ func _on_interact():
 		ultima_fala = (ultima_fala + 1) % 5
 	else:
 		DialogManager.start_dialog(global_position, lines)
+		fez_tutorial = true
 
 func _on_dialog_finished():
 	animated_sprite_2d.play("dormindo")

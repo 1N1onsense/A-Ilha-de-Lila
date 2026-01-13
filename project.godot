@@ -22,6 +22,10 @@ PlayerData="*res://Scripts/PlayerData.gd"
 DialogManager="*res://Singletons/DialogManager.gd"
 MusicManager="*res://Mapas e Cenas/MusicManager.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [global_group]
 
 player=""
