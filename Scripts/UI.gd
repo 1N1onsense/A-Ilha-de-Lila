@@ -17,7 +17,6 @@ func att_inventory():
 	var inventory = PlayerData.get_items()
 	if (inventory.is_empty()):
 		var empty_item = load("res://Resources/Items/EmptyItem.tres")
-		print(inventory)
 		refresh_ui([empty_item])
 	else:
 		refresh_ui(inventory)
@@ -30,7 +29,6 @@ func animate_inventory():
 		toggle_inventory()
 
 func refresh_ui(inventory : Array[ItemData]):
-	print(inventory)
 	for child in items_ui.get_children():
 		child.queue_free()
 	for item_data in inventory:
