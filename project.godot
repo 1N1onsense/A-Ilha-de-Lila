@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Nosso Jogo"
+config/name="A Ilha de Lila"
 run/main_scene="uid://s6jquu3hwgqx"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://c7dktjgit6k46"
 
 [autoload]
 
